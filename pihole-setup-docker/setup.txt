@@ -1,0 +1,8 @@
+1. either do the docker compose or the docker_run script
+2. for the docker compose just copy the compose file given under Quick Start section of the pihole docker setup on github here https://github.com/pi-hole/docker-pi-hole#upgrading-persistence-and-customizations
+3. for the docker run just wget https://raw.githubusercontent.com/pi-hole/docker-pi-hole/master/examples/docker_run.sh
+4. edit the config file and add your timezone and also remove the tcp/67 for DHCP if you don't need it
+5. make sure under FTLCONF_LOCAL_IPV4 you enter your device's private IP address
+5. make sure that you save the password that docker gives you because you need it to log into the web interface
+6. to change the password just run sudo docker exec -it pihole bash to get into pihole terminal
+7. then run pihole -a -p (new password here) and you should see "pihole password changed" or something like that 
