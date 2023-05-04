@@ -1,0 +1,9 @@
+1. open diskpart
+2. > list disk
+3. > select disk (disk#)
+4. > clean
+5. > create partition primary
+6. > select partition 1
+7. format fs=fat32 quick (or ntfs)
+   - if formatting USB, use fat32, if formatting hard drive with large storage then use ntfs, if SD use exFAT
+   - can also just check with windows disk manager what the default file system is
