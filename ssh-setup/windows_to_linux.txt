@@ -1,0 +1,6 @@
+1. install openssh server on linux device
+2. on windows, run ssh-keygen -t rsa -b 4096
+3. navigate to .ssh folder (usually it's under C:/Users/your_name/.ssh)
+4. now run cat id_rsa.pub | ssh username@ip "cat >> ~/.ssh/authorized_keys" # if authorized_keys file is not located in ~/.ssh then enter that path instead
+5. enter your account password on the linux device when prompted
+6. the public key of the windows device should be appended to the authorized_keys file on the linux device
