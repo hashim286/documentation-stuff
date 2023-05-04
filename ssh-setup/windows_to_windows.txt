@@ -1,0 +1,6 @@
+1. ssh-keygen -t rsa -b 4096
+2. find the .ssh folder usually under C:/Users/your_name 
+3. scp ./id_rsa.pub destination_username@ip:(destination directory)
+  - using a destination directory of / on windows copies to the C:/ directory, ~/ copies to the directory of the username you entered
+4. on host device you can then open id_rsa.pub with notepad and copy the key to the authorized keys file on the destination device with notepad
+5. if this doesn't work you can try copying public key to the C:/ProgramData/ssh/administrators_authorized_keys or delete the line at the end of sshd_config that specifies where the administrator keys are
