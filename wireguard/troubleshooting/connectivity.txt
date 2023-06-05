@@ -1,0 +1,5 @@
+1. check server on and connected to internet
+2. check that listen port is correct and that the router is set to forward traffic on that port to server
+3. check if dynamic DNS address has changed, if so update manually or make sure client installed on local device
+4. check server config files 
+5. if all else fails, regen new private key pair
