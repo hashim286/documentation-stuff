@@ -1,3 +1,1 @@
-# documentation
-
-instructions for stuff I use in case I forget
+setup instructions for stuff I use in case I forget
