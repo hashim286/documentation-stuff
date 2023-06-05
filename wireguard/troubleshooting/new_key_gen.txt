@@ -1,0 +1,4 @@
+1. generate key pair with $ wg genkey | tee privatekey | wg pubkey > publickey
+2. update the config files with the private key for the interface
+3. remember to run the config script after updating the config files
+4. update the client side config files with the interface's public key
