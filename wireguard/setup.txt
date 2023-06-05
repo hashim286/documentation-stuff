@@ -1,0 +1,15 @@
+1. make new config file in /etc/wireguard, copy an existing one and add a number to end, make sure to assign IPs to each device
+2. get server public key also in /etc/wireguard, copy it to the peer in a note file
+3. copy the peer public key to a note file on the server
+4. add public key from note files to the wireguard config file under peer section PublicKey entry on each side
+5. add a port that isn't in use
+6. go to your router, make sure you forward traffic from that port to wg server
+7. sudo ufw allow (port chosen)/udp && sudo ufw enable
+8. on the server, go to home directory or wherever wg-setup-wg#.sh is located
+9. copy an existing script
+10. change the numbers wherever wg is to the same one in the config files
+11. change the first IP to the server's designated IP in the config file, change the peer IP to the one you assigned on the peer
+12. sudo ./wg-setup.wg#.sh
+13. sudo crontab -e
+14. @reboot /location/of/wg/script.sh
+15. if you created a new script, you might need to chmod u+x script.sh, if you copied one, it should be executable 
