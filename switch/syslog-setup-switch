@@ -1,0 +1,18 @@
+1. on switch, follow instructions here https://www.tp-link.com/us/configuration-guides/configuring_system_logs/?configurationId=18229#_idTextAnchor004
+- they're really good
+2. on server, make sure rsyslog is installed
+3. sudo systemctl start syslog and enable it
+4. sudo vim /etc/rsyslog.conf and make sure that your config file looks like below 
+# provides UDP syslog reception
+module(load="imudp")
+input(type="imudp" port="514")
+
+# provides TCP syslog reception
+module(load="imtcp")
+input(type="imtcp" port="514")
+$template RemInputLogs, "/var/log/remotelogs/%FROMHOST-IP%/%PROGRAMNAME%.log"
+*.* ?RemInputLogs
+5. if ufw is enabled, do sudo ufw enable 514
+6. sudo ufw enable
+7. sudo systemctl restart rsyslog
+8. all logs are stored in /var/log/syslog
