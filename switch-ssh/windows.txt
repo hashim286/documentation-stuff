@@ -1,0 +1,5 @@
+1. make sure switch is enabled for ssh (on tp link ip ssh server)
+2. on pc, navigate to .ssh folder and make a file called "config" if it does not exist already, add "Ciphers +aes128-cbc,aes256-cbc,3des-cbc
+KexAlgorithms +diffie-hellman-group1-sha1
+HostkeyAlgorithms +ssh-rsa" to the file and save
+3. run  ssh -oHostKeyAlgorithms=+ssh-dss user@ip to ssh into the switch
