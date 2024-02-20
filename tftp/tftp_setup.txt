@@ -1,0 +1,5 @@
+1. sudo apt instal tftpd-hpa
+2. sudo vim /etc/default/tftpd-hpa
+3. add "--create" next to TFTP_OPTIONS
+4. sudo systemctl restart tftpd_hpa.service
+5. sudo systemctl status tftpd_hpa
