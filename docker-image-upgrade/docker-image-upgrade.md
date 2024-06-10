@@ -5,9 +5,7 @@
 3. confirm the new image is on the device <br/>`docker image ls`
 
 4. with new image on device, stop the old docker container <br/>`docker stop (container prefix)`
-   - usually this is the first part of the image name, if the image name is portainer/portainer-ce then you would run 
-  
-        docker stop portainer
+   - usually this is the first part of the image name, if the image name is portainer/portainer-ce then you would run <br/> `docker stop portainer`
 
 5. remove the stopped container <br/>`docker rm (container prefix)`
 
