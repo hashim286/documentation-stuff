@@ -9,6 +9,6 @@
 
 6. confirm container is gone <br/>`docker ps -a`
 
-7. with container gone, remove the old image from the device<br/>`docker image ls` (copy image ID for pihole with tag of <\none>)<br/>`docker image rm (image ID)` 
+7. with container gone, remove the old image from the device<br/>`docker image ls` (copy image ID for pihole with tag of \<none>)<br/>`docker image rm (image ID)` 
 
 8. rerun the pihole docker setup script located [here](https://github.com/pi-hole/docker-pi-hole/blob/master/examples/docker_run.sh)
