@@ -14,3 +14,4 @@
 7. with container gone, remove the old image from the device<br/>`docker image ls` (copy image ID for pihole with tag of \<none>)<br/>`docker image rm (image ID)` 
 
 8. if there is a setup script to run then rerun the setup script
+9. if you run into problem where bind address is in use, then run following command to check what is using the ports<br/>`sudo netstat -tulpn | grep LISTEN` <br/> sometimes a process for the container will still be around even if the container is dead so you may need to kill the process with <br/> `sudo killall (process name or number)`
