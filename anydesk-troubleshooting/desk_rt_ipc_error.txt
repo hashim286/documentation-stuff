@@ -1,0 +1,16 @@
+# Error
+
+- basically it just says desk_rt_ipc_error and will not connect into anydesk, the teamviewer session will also show as offline
+    - this is also not fixed by a reboot and I was only able to figure it out by checking journalctl logs for some info
+    - the device was still reachable via SSH and appeared to be operating in every other way besides being reachable on teamviewer/anydesk
+
+- from googling this it's basically an issue with X11 so you need to ensure that's the session that is being used, if it is then do the below command
+
+- the below command helped me last time this happened 
+
+`systemctl --user status xdg-desktop-portal`
+
+- for me this showed the service failed to start, if it is failed then try 
+
+`sudo systemctl --user restart xdg-desktop-portal`
+
